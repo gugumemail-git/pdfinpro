@@ -24,7 +24,7 @@ export default function AppShell({ title, subtitle, children }: AppShellProps) {
         />
         <main className="p-4 md:p-6 flex-1 overflow-y-auto">{children}</main>
         <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center text-[11px] text-slate-500 dark:text-slate-400 py-4 px-4">
-          <span className="font-bold text-brand-700 dark:text-brand-400">PDFin</span> © 2025 — Studio PDF Profesional
+          <span className="font-bold text-brand-700 dark:text-brand-400">PDFin</span> © 2026 — Studio PDF Profesional
         </footer>
       </div>
     </div>
