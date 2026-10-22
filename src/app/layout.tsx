@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   title: "PDFin — Studio PDF Profesional",
   description:
     "Gabung, pisah, putar, resize, kompres, dan konversi PDF tanpa mengunggah file. 100% berjalan di browser Anda.",
+  manifest: "/manifest.json", // <--- Ini untuk PWA
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "PDFin",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    icon: "/icon-192x192.png",
+    apple: "/icon-192x192.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -30,7 +43,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      {/* CDN FontAwesome sementara, karena kita belum install package-nya */}
       <head>
         <link
           rel="stylesheet"
