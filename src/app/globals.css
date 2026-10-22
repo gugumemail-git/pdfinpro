@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: var(--font-jakarta), sans-serif;
+  
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+}
+
+:root {
+  --scroll-track: #f1f5f9;
+  --scroll-thumb: #059669;
+  --scroll-thumb-hover: #047857;
+}
+
+.dark {
+  --scroll-track: #1e293b;
+  --scroll-thumb: #10b981;
+  --scroll-thumb-hover: #34d399;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}
+
+/* Utility: active nav item */
+.nav-active {
+  background: #ffffff !important;
+  color: #065f46 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.dark .nav-active {
+  background: #065f46 !important;
+  color: #ffffff !important;
+}
+
+/* Dropzone aktif */
+.drop-active {
+  border-color: #10b981 !important;
+  background: #ecfdf5 !important;
+}
+.dark .drop-active {
+  background: rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Stepper line */
+.stepper-line {
+  background: linear-gradient(
+    90deg,
+    #10b981 0%,
+    #10b981 var(--progress, 0%),
+    #e2e8f0 var(--progress, 0%),
+    #e2e8f0 100%
+  );
+}
+.dark .stepper-line {
+  background: linear-gradient(
+    90deg,
+    #10b981 0%,
+    #10b981 var(--progress, 0%),
+    #334155 var(--progress, 0%),
+    #334155 100%
+  );
+}
